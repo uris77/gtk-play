@@ -1,17 +1,18 @@
 use gtk::{prelude::*, Application, ApplicationWindow, Button};
 
-pub mod listings;
+mod listings;
 
 const APP_ID: &str = "org.gtk_rs.HelloWorld3";
 
 fn main() {
     let app = Application::builder().application_id(APP_ID).build();
 
-    app.connect_activate(build_ui);
+    app.connect_activate(listings::memory_mgmt::build_ui);
 
     app.run();
 }
 
+#[allow(dead_code)]
 fn build_ui(app: &Application) {
     let button = Button::builder()
         .label("Press me")
