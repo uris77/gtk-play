@@ -3,6 +3,7 @@ use std::{cell::Cell, rc::Rc};
 
 use gtk::{self, glib, prelude::*, Application, ApplicationWindow, Button};
 
+#[allow(dead_code)]
 pub fn build_ui(application: &Application) {
     let button_increase = Button::builder()
         .label("Increase")

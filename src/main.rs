@@ -45,10 +45,6 @@ pub fn build_custom_btn(app: &Application) {
     button.set_margin_start(12);
     button.set_margin_end(12);
 
-    button.connect_clicked(move |button| {
-        button.set_label("Hi!");
-    });
-
     let window = ApplicationWindow::builder()
         .application(app)
         .title("GTK Tutorial")
